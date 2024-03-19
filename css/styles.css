@@ -10864,6 +10864,15 @@ p {
   display: block;
   font-weight: 100;
 }
+.section-heading .section-info {
+  display: block;
+  font-size: 0.9rem;
+}
+.icon {
+  width: 1em;
+  height: 1em;
+  vertical-align: -0.125em;
+}
 
 .bg-faded {
   background-color: #f6e1c5;
@@ -10983,6 +10992,11 @@ p {
     position: relative;
     z-index: 0;
     max-width: 60vw;
+  }
+  .product-item .product-item-img-small {
+    position: relative;
+    z-index: 0;
+    max-width: 30vw;
   }
   .product-item .product-item-description {
     position: relative;
