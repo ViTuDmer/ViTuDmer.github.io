@@ -11029,3 +11029,37 @@ p {
 .address strong {
   font-size: 1.2rem;
 }
+
+
+.btn-whatsapp {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    padding: 16px 32px;
+    background: #25D366;
+    color: #040404;
+    font-size: 18px;
+    font-weight: 600;
+    text-decoration: none;
+    border-radius: 50px;
+    box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4);
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.btn-whatsapp:hover {
+    background: #1da851;
+    box-shadow: 0 6px 20px rgba(37, 211, 102, 0.6);
+    transform: translateY(-2px);
+    color: #badbcc;
+}
+
+.btn-whatsapp:active {
+    transform: translateY(0);
+}
+
+.btn-whatsapp svg {
+    width: 24px;
+    height: 24px;
+    fill: #040404;
+}
