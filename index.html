@@ -10,6 +10,13 @@
   <link rel="canonical" href="https://casadmer.com/">
   <link rel="alternate" hreflang="es-CO" href="https://casadmer.com/">
   <link rel="alternate" hreflang="x-default" href="https://casadmer.com/">
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-KB4LZ9W6');</script>
+  <!-- End Google Tag Manager -->  
   <meta property="og:type" content="website">
   <meta property="og:locale" content="es_CO">
   <meta property="og:site_name" content="Casa D'mer Taganga">
@@ -35,6 +42,10 @@
 </head>
 
 <body>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KB4LZ9W6"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->  
   <header class="top">
     <div class="wrap nav"><a class="brand" href="#inicio"><span class="brand-mark">⌁</span> Casa D'mer</a>
       <nav class="links"><a href="en/index.html" lang="en">EN</a><a href="#habitaciones">Habitaciones</a><a href="#casa">La casa</a><a href="#taganga">Guía local</a><a href="#nomadas">Nómadas</a><a
@@ -209,12 +220,6 @@
     href="https://wa.me/573177805842?text=Hola%2C%20quiero%20reservar%20en%20Casa%20D%27mer" target="_blank"
     rel="noopener">◔</a>
   <script>
-    /* GTM: reemplaza el valor por tu ID real, por ejemplo GTM-ABC1234. */
-    const GTM_ID = 'GTM-XXXXXXX';
-    window.dataLayer = window.dataLayer || [];
-    if (!GTM_ID.includes('XXXX')) {
-      (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});const f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer',GTM_ID);
-    }
     const arrival = document.querySelector('#arrival'), nights = document.querySelector('#nights'), guests = document.querySelector('#guests'), bookButton = document.querySelector('#bookButton');
     arrival.min = new Date().toISOString().slice(0, 10);
     [arrival, nights, guests].forEach(field => field.addEventListener('change', () => { const data = `Hola, quiero reservar en Casa D'mer. Llegada: ${arrival.value || 'por definir'}; noches: ${nights.value || '2'}; huéspedes: ${guests.value || '2'}.`; bookButton.href = `https://wa.me/573177805842?text=${encodeURIComponent(data)}`; }));
