@@ -1,3 +1,10 @@
+@font-face{font-family:'DM Sans';font-style:normal;font-weight:400;font-display:swap;src:url(../fonts/DMSans-Regular.ttf) format('truetype')}
+@font-face{font-family:'DM Sans';font-style:normal;font-weight:500;font-display:swap;src:url(../fonts/DMSans-Medium.ttf) format('truetype')}
+@font-face{font-family:'DM Sans';font-style:normal;font-weight:600;font-display:swap;src:url(../fonts/DMSans-SemiBold.ttf) format('truetype')}
+@font-face{font-family:'DM Sans';font-style:normal;font-weight:700;font-display:swap;src:url(../fonts/DMSans-Bold.ttf) format('truetype')}
+@font-face{font-family:'Playfair Display';font-style:normal;font-weight:600;font-display:swap;src:url(../fonts/PlayfairDisplay-SemiBold.ttf) format('truetype')}
+@font-face{font-family:'Playfair Display';font-style:normal;font-weight:700;font-display:swap;src:url(../fonts/PlayfairDisplay-Bold.ttf) format('truetype')}
+@font-face{font-family:'Playfair Display';font-style:italic;font-weight:600;font-display:swap;src:url(../fonts/PlayfairDisplay-SemiBoldItalic.ttf) format('truetype')}
 :root {
     --ink: #15383b;
     --coral: #e86f51;
@@ -91,6 +98,13 @@ a {
     background: transparent;
     color: var(--ink);
     border: 1px solid var(--ink);
+}
+.final .button.outline {
+    color: #fff;
+    border-color: #fff;
+}
+.final .button.outline:hover {
+    background: rgba(255,255,255,.15);
 }
 .hero {
     min-height: 710px;
@@ -508,6 +522,7 @@ footer {
 .room-info h3 { font:600 30px/1.05 "Playfair Display",serif; margin:5px 0 7px; }
 .room-info p { font-size:14px; margin:0; }
 .room-info a { display:inline-block; border-bottom:1px solid #fff; margin-top:12px; font-size:13px; font-weight:700; }
+.room-price { display:block; color:#fff; font:700 15px "DM Sans",sans-serif; text-transform:none; letter-spacing:0; margin-top:8px; }
 .gallery-link { display:inline-block; padding:0; margin:12px 16px 0 0; border:0; border-bottom:1px solid #fff; background:transparent; color:#fff; cursor:pointer; font:700 13px "DM Sans",sans-serif; }
 .room-note { display:flex; gap:18px; align-items:center; margin:35px 0 0; padding:20px 0; border-top:1px solid var(--line); color:#4e6668; }
 .room-note b { color:var(--coral); font:600 24px "Playfair Display",serif; }
