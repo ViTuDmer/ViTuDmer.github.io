@@ -33,8 +33,11 @@
 <body>
   <header class="top">
     <div class="wrap nav"><a class="brand" href="../index.html"><span class="brand-mark">⌁</span> Casa D'mer</a>
-      <nav class="links"><a href="../index.html">ES</a><a href="#rooms">Rooms</a><a href="#house">The house</a><a href="#guide">Local guide</a><a
-          class="button light" href="../index.html#book">Book direct</a></nav>
+      <button class="menu-toggle" aria-label="Menu" onclick="this.nextElementSibling.classList.toggle('open')">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="links"><a href="../index.html" onclick="this.parentElement.classList.remove('open')">ES</a><a href="#rooms" onclick="this.parentElement.classList.remove('open')">Rooms</a><a href="#house" onclick="this.parentElement.classList.remove('open')">The house</a><a href="#guide" onclick="this.parentElement.classList.remove('open')">Local guide</a><a
+          class="button light" href="../index.html#book" onclick="this.parentElement.classList.remove('open')">Book direct</a></nav>
     </div>
   </header>
   <main>
@@ -170,6 +173,18 @@
   <a class="wa" aria-label="Book on WhatsApp"
     href="https://wa.me/573177805842?text=Hello%2C%20I%20would%20like%20to%20book%20at%20Casa%20D%27mer" target="_blank"
     rel="noopener">◔</a>
+  <script>
+    (function(){
+      var h=document.querySelector('.top'),y=0,d=0;
+      window.addEventListener('scroll',function(){
+        var cy=window.pageYOffset;
+        d=cy-y; y=cy;
+        if(cy<60){h.classList.remove('hide','scrolled');return;}
+        h.classList.toggle('scrolled',cy>0);
+        if(d>0)h.classList.add('hide'); else h.classList.remove('hide');
+      },{passive:true});
+    })();
+  </script>
 </body>
 
 </html>

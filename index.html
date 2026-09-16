@@ -50,8 +50,11 @@
   <!-- End Google Tag Manager (noscript) -->  
   <header class="top">
     <div class="wrap nav"><a class="brand" href="#inicio"><span class="brand-mark">⌁</span> Casa D'mer</a>
-      <nav class="links"><a href="en/index.html" lang="en">EN</a><a href="#habitaciones">Habitaciones</a><a href="#casa">La casa</a><a href="#taganga">Guía local</a><a href="#nomadas">Nómadas</a><a
-          class="button light" href="#reserva">Reservar directo</a></nav>
+      <button class="menu-toggle" aria-label="Menú" onclick="this.nextElementSibling.classList.toggle('open')">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="links"><a href="en/index.html" lang="en" onclick="this.parentElement.classList.remove('open')">EN</a><a href="#habitaciones" onclick="this.parentElement.classList.remove('open')">Habitaciones</a><a href="#casa" onclick="this.parentElement.classList.remove('open')">La casa</a><a href="#taganga" onclick="this.parentElement.classList.remove('open')">Guía local</a><a href="#nomadas" onclick="this.parentElement.classList.remove('open')">Nómadas</a><a
+          class="button light" href="#reserva" onclick="this.parentElement.classList.remove('open')">Reservar directo</a></nav>
     </div>
   </header>
   <main>
@@ -292,6 +295,18 @@
     document.querySelector('.gallery-next').addEventListener('click', () => moveGallery(1));
     modal.addEventListener('click', event => { if (event.target === modal) modal.close(); });
     document.addEventListener('keydown', event => { if (!modal.open) return; if (event.key === 'ArrowLeft') moveGallery(-1); if (event.key === 'ArrowRight') moveGallery(1); });
+  </script>
+  <script>
+    (function(){
+      var h=document.querySelector('.top'),y=0,d=0;
+      window.addEventListener('scroll',function(){
+        var cy=window.pageYOffset;
+        d=cy-y; y=cy;
+        if(cy<60){h.classList.remove('hide','scrolled');return;}
+        h.classList.toggle('scrolled',cy>0);
+        if(d>0)h.classList.add('hide'); else h.classList.remove('hide');
+      },{passive:true});
+    })();
   </script>
 </body>
 
