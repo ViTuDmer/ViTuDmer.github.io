@@ -46,12 +46,12 @@
   height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <!-- End Google Tag Manager (noscript) -->  
   <header class="top">
-    <div class="wrap nav"><a class="brand" href="index.html"><span class="brand-mark">⌁</span> Casa D'mer</a>
+    <div class="wrap nav"><a class="brand" href="index.html"><svg class="brand-mark" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block; vertical-align:-3px;"><path d="M14 11a2 2 0 1 1-4 0 4 4 0 0 1 8 0 6 6 0 0 1-12 0 8 8 0 0 1 16 0 10 10 0 1 1-20 0 11.93 11.93 0 0 1 2.42-7.22 2 2 0 1 1 3.16 2.44"/></svg> Casa D'mer</a>
       <button class="menu-toggle" aria-label="Menu" onclick="this.nextElementSibling.classList.toggle('open')">
         <span></span><span></span><span></span>
       </button>
-      <nav class="links"><a href="../index.html" lang="es" onclick="this.parentElement.classList.remove('open')">ES</a><a href="#rooms" onclick="this.parentElement.classList.remove('open')">Rooms</a><a href="#about" onclick="this.parentElement.classList.remove('open')">The house</a><a href="#guide" onclick="this.parentElement.classList.remove('open')">Local guide</a><a href="#nomads" onclick="this.parentElement.classList.remove('open')">Nomads</a><a
-          class="button light" href="#reserva" onclick="this.parentElement.classList.remove('open')">Book direct</a></nav>
+      <nav class="links"><a href="../index.html" lang="es" onclick="this.parentElement.classList.remove('open')">ES</a><a href="#rooms" onclick="this.parentElement.classList.remove('open')">Rooms</a><a href="#house" onclick="this.parentElement.classList.remove('open')">The house</a><a href="#guide" onclick="this.parentElement.classList.remove('open')">Local guide</a><a href="#nomads" onclick="this.parentElement.classList.remove('open')">Nomads</a><a
+          class="button light" href="#book" onclick="this.parentElement.classList.remove('open')">Book direct</a></nav>
     </div>
   </header>
   <main>
@@ -231,9 +231,10 @@
           <p>Ask us when you book and we will help you make a plan.</p>
         </div>
         <div class="guide">
-          <article class="guide-card"><span>By boat or on foot</span>
-            <h3>Playa Grande</h3>
-            <p>Calm water, snorkelling and a full day by the sea.</p>
+          <article class="guide-card"><span>15 min by bus</span>
+            <h3>Santa Marta</h3>
+            <p>Restaurants, beaches and local life. Everything you need for your day trip from Taganga.</p>
+            <a href="en/santa-marta.html" style="display:inline-block; margin-top:12px; font:700 13px 'DM Sans',sans-serif; color:#fff; border-bottom:1px solid #fff;">View guide →</a>
           </article>
           <article class="guide-card"><span>From Taganga</span>
             <h3>Tayrona</h3>
@@ -291,17 +292,27 @@
           style="margin-left:12px;">Call now</a>
       </div>
     </section>
+    <dialog class="book-modal" id="bookModal">
+      <div class="book-box" style="position:relative; margin:0; width:100%; max-width:850px; padding:24px 20px 20px; border-radius:12px;">
+        <button class="gallery-close" type="button" aria-label="Close booking" onclick="document.getElementById('bookModal').close()" style="top:10px; right:10px; width:30px; height:30px; font-size:24px; line-height:1; position:absolute; border:0; background:transparent; cursor:pointer; color:var(--ink);">×</button>
+        <h3 style="grid-column: 1 / -1; margin:0 0 16px; font-family:'Playfair Display',serif; font-size:22px; color:var(--ink);">Book your stay</h3>
+        <div class="book-field"><label for="modal-arrival">Arrival</label><input id="modal-arrival" type="date"></div>
+        <div class="book-field"><label for="modal-nights">Nights</label><input id="modal-nights" type="number" min="1" value="2"></div>
+        <div class="book-field"><label for="modal-guests">Guests</label><input id="modal-guests" type="number" min="1" value="2"></div>
+        <a class="button" id="modalBookButton" href="https://wa.me/573177805842?text=Hello%2C%20I%20would%20like%20to%20book%20at%20Casa%20D%27mer" target="_blank" rel="noopener">Check availability</a>
+      </div>
+    </dialog>
   </main>
   <footer>
     <div class="wrap">
       <div class="footer-top">
-        <div><a class="brand" href="#home"><span class="brand-mark">⌁</span> Casa D'mer</a>
+        <div><a class="brand" href="#home"><svg class="brand-mark" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block; vertical-align:-3px;"><path d="M14 11a2 2 0 1 1-4 0 4 4 0 0 1 8 0 6 6 0 0 1-12 0 8 8 0 0 1 16 0 10 10 0 1 1-20 0 11.93 11.93 0 0 1 2.42-7.22 2 2 0 1 1 3.16 2.44"/></svg> Casa D'mer</a>
           <p>A simple, special rest in the heart of Taganga, Santa Marta.</p>
         </div>
         <div class="footer-links"><a href="#rooms">Rooms</a><a href="#guide">Local guide</a><a
             href="https://www.google.com/maps/search/?api=1&query=Casa+D%27mer+Taganga" target="_blank"
             rel="noopener">Directions</a><a href="https://www.instagram.com/casadmertaganga/" target="_blank"
-            rel="noopener">Instagram</a></div>
+            rel="noopener">Instagram</a><a href="policies.html">Policies</a></div>
       </div>
       <div class="tiny"><span>© Casa D'mer · RNT 121456</span><span>Calle 9 #1-33, Taganga, Santa Marta</span></div>
     </div>
@@ -364,6 +375,24 @@
       if (!modal.open) return; if (e.key
         === 'ArrowLeft') move(-1); if (e.key === 'ArrowRight') move(1)
     });
+    const modalArrival = document.querySelector('#modal-arrival'), modalNights = document.querySelector('#modal-nights'), modalGuests = document.querySelector('#modal-guests'), modalBookButton = document.querySelector('#modalBookButton');
+    const bookModal = document.querySelector('#bookModal');
+    if(modalArrival) modalArrival.min = new Date().toISOString().slice(0, 10);
+    if(modalArrival) {
+      [modalArrival, modalNights, modalGuests].forEach(field => field.addEventListener('change', () => { const data = `Hello, I would like to book at Casa D'mer. Arrival: ${modalArrival.value || 'not set'}; nights: ${modalNights.value || '2'}; guests: ${modalGuests.value || '2'}.`; modalBookButton.href = `https://wa.me/573177805842?text=${encodeURIComponent(data)}`; }));
+    }
+
+    document.querySelectorAll('a[href="#book"]').forEach(link => {
+      link.addEventListener('click', (e) => {
+        e.preventDefault();
+        if(bookModal) bookModal.showModal();
+        let msg = `Hello, I would like to book at Casa D'mer`;
+        if(link.dataset.room) msg = `Hello, I would like to book at Casa D'mer. I'm interested in: ${link.dataset.room}`;
+        if(link.textContent.toLowerCase().includes('long stay')) msg = `Hello, I am interested in long stay information.`;
+        if(modalBookButton) modalBookButton.href = `https://wa.me/573177805842?text=${encodeURIComponent(msg)}`;
+      });
+    });
+    if(bookModal) bookModal.addEventListener('click', event => { if (event.target === bookModal) bookModal.close(); });
   </script>
   <script>
     (function(){

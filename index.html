@@ -49,12 +49,18 @@
   height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <!-- End Google Tag Manager (noscript) -->  
   <header class="top">
-    <div class="wrap nav"><a class="brand" href="#inicio"><span class="brand-mark">⌁</span> Casa D'mer</a>
+    <div class="wrap nav"><a class="brand" href="#inicio"><svg class="brand-mark" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block; vertical-align:-3px;"><path d="M14 11a2 2 0 1 1-4 0 4 4 0 0 1 8 0 6 6 0 0 1-12 0 8 8 0 0 1 16 0 10 10 0 1 1-20 0 11.93 11.93 0 0 1 2.42-7.22 2 2 0 1 1 3.16 2.44"/></svg> Casa D'mer</a>
       <button class="menu-toggle" aria-label="Menú" onclick="this.nextElementSibling.classList.toggle('open')">
         <span></span><span></span><span></span>
       </button>
-      <nav class="links"><a href="en/index.html" lang="en" onclick="this.parentElement.classList.remove('open')">EN</a><a href="#habitaciones" onclick="this.parentElement.classList.remove('open')">Habitaciones</a><a href="#casa" onclick="this.parentElement.classList.remove('open')">La casa</a><a href="#taganga" onclick="this.parentElement.classList.remove('open')">Guía local</a><a href="#nomadas" onclick="this.parentElement.classList.remove('open')">Nómadas</a><a
-          class="button light" href="#reserva" onclick="this.parentElement.classList.remove('open')">Reservar directo</a></nav>
+      <nav class="links">
+        <a href="en/" lang="en" onclick="this.parentElement.classList.remove('open')">EN</a>
+        <a href="#habitaciones" onclick="this.parentElement.classList.remove('open')">Habitaciones</a>
+        <a href="#casa" onclick="this.parentElement.classList.remove('open')">La casa</a>
+        <a href="#taganga" onclick="this.parentElement.classList.remove('open')">Guía local</a>
+        <a href="#nomadas" onclick="this.parentElement.classList.remove('open')">Nómadas</a>
+        <a class="button light" href="#reserva" onclick="this.parentElement.classList.remove('open')">Reservar directo</a>
+      </nav>
     </div>
   </header>
   <main>
@@ -67,8 +73,8 @@
           <div class="book-field"><label for="arrival">Llegada</label><input id="arrival" type="date"></div>
           <div class="book-field"><label for="nights">Noches</label><input id="nights" type="number" min="1" value="2">
           </div>
-          <div class="book-field"><label for="guests">Huéspedes</label><input id="guests" type="number" min="1"
-              value="2"></div><a class="button" id="bookButton"
+          <div class="book-field"><label for="guests">Huéspedes</label><input id="guests" type="number" min="1" value="2">
+          </div><a class="button" id="bookButton"
             href="https://wa.me/573177805842?text=Hola%2C%20quiero%20reservar%20en%20Casa%20D%27mer" target="_blank"
             rel="noopener">Ver disponibilidad</a>
         </div>
@@ -219,9 +225,10 @@
             plan.</p>
         </div>
         <div class="guide">
-          <article class="guide-card"><span>En bote o caminando</span>
-            <h3>Playa Grande</h3>
-            <p>Agua tranquila, snorkel y un día completo junto al mar.</p>
+          <article class="guide-card"><span>A 15 min en bus</span>
+            <h3>Santa Marta</h3>
+            <p>Restaurantes, playas y vida local. Todo lo que necesitas para tu día fuera de Taganga.</p>
+            <a href="santa-marta.html" style="display:inline-block; margin-top:12px; font:700 13px 'DM Sans',sans-serif; color:#fff; border-bottom:1px solid #fff;">Ver guía →</a>
           </article>
           <article class="guide-card"><span>Desde Taganga</span>
             <h3>Tayrona</h3>
@@ -254,17 +261,27 @@
           style="margin-left:12px;">Llamar ahora</a>
       </div>
     </section>
+    <dialog class="book-modal" id="bookModal">
+      <div class="book-box" style="position:relative; margin:0; width:100%; max-width:850px; padding:24px 20px 20px; border-radius:12px;">
+        <button class="gallery-close" type="button" aria-label="Cerrar reserva" onclick="document.getElementById('bookModal').close()" style="top:10px; right:10px; width:30px; height:30px; font-size:24px; line-height:1; position:absolute; border:0; background:transparent; cursor:pointer; color:var(--ink);">×</button>
+        <h3 style="grid-column: 1 / -1; margin:0 0 16px; font-family:'Playfair Display',serif; font-size:22px; color:var(--ink);">Reserva tu estancia</h3>
+        <div class="book-field"><label for="modal-arrival">Llegada</label><input id="modal-arrival" type="date"></div>
+        <div class="book-field"><label for="modal-nights">Noches</label><input id="modal-nights" type="number" min="1" value="2"></div>
+        <div class="book-field"><label for="modal-guests">Huéspedes</label><input id="modal-guests" type="number" min="1" value="2"></div>
+        <a class="button" id="modalBookButton" href="https://wa.me/573177805842?text=Hola%2C%20quiero%20reservar%20en%20Casa%20D%27mer" target="_blank" rel="noopener">Ver disponibilidad</a>
+      </div>
+    </dialog>
   </main>
   <footer>
     <div class="wrap">
       <div class="footer-top">
-        <div><a class="brand" href="#inicio"><span class="brand-mark">⌁</span> Casa D'mer</a>
+        <div><a class="brand" href="#inicio"><svg class="brand-mark" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block; vertical-align:-3px;"><path d="M14 11a2 2 0 1 1-4 0 4 4 0 0 1 8 0 6 6 0 0 1-12 0 8 8 0 0 1 16 0 10 10 0 1 1-20 0 11.93 11.93 0 0 1 2.42-7.22 2 2 0 1 1 3.16 2.44"/></svg> Casa D'mer</a>
           <p>Un descanso sencillo y especial en el corazón de Taganga, Santa Marta.</p>
         </div>
         <div class="footer-links"><a href="#casa">La casa</a><a href="#taganga">Guía local</a><a
             href="https://www.google.com/maps/search/?api=1&query=Casa+D%27mer+Taganga" target="_blank"
             rel="noopener">Cómo llegar</a><a href="https://www.instagram.com/casadmertaganga/" target="_blank"
-            rel="noopener">Instagram</a></div>
+            rel="noopener">Instagram</a><a href="politicas.html">Políticas</a></div>
       </div>
       <div class="tiny"><span>© Casa D'mer · RNT 121456</span><span>Cl. 9 #1-33, Taganga, Santa Marta</span></div>
     </div>
@@ -295,6 +312,24 @@
     document.querySelector('.gallery-next').addEventListener('click', () => moveGallery(1));
     modal.addEventListener('click', event => { if (event.target === modal) modal.close(); });
     document.addEventListener('keydown', event => { if (!modal.open) return; if (event.key === 'ArrowLeft') moveGallery(-1); if (event.key === 'ArrowRight') moveGallery(1); });
+    const modalArrival = document.querySelector('#modal-arrival'), modalNights = document.querySelector('#modal-nights'), modalGuests = document.querySelector('#modal-guests'), modalBookButton = document.querySelector('#modalBookButton');
+    const bookModal = document.querySelector('#bookModal');
+    if(modalArrival) modalArrival.min = new Date().toISOString().slice(0, 10);
+    if(modalArrival) {
+      [modalArrival, modalNights, modalGuests].forEach(field => field.addEventListener('change', () => { const data = `Hola, quiero reservar en Casa D'mer. Llegada: ${modalArrival.value || 'por definir'}; noches: ${modalNights.value || '2'}; huéspedes: ${modalGuests.value || '2'}.`; modalBookButton.href = `https://wa.me/573177805842?text=${encodeURIComponent(data)}`; }));
+    }
+
+    document.querySelectorAll('a[href="#reserva"]').forEach(link => {
+      link.addEventListener('click', (e) => {
+        e.preventDefault();
+        if(bookModal) bookModal.showModal();
+        let msg = `Hola, quiero reservar en Casa D'mer`;
+        if(link.dataset.room) msg = `Hola, quiero reservar en Casa D'mer. Me interesa: ${link.dataset.room}`;
+        if(link.textContent.includes('estancia larga')) msg = `Hola, me interesa la información de estancia larga.`;
+        if(modalBookButton) modalBookButton.href = `https://wa.me/573177805842?text=${encodeURIComponent(msg)}`;
+      });
+    });
+    if(bookModal) bookModal.addEventListener('click', event => { if (event.target === bookModal) bookModal.close(); });
   </script>
   <script>
     (function(){
