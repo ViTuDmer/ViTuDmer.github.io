@@ -7,6 +7,9 @@ Allow: /en/policies.html
 Allow: /santa-marta.html
 Allow: /taganga.html
 Allow: /politicas.html
-Allow: /old2/
 
 Sitemap: https://casadmer.com/sitemap.xml
+
+# AI-readable context
+Allow: /llms.txt
+Allow: /llms-en.txt

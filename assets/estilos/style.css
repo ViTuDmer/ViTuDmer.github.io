@@ -622,3 +622,11 @@ footer {
 }
 
 
+
+/* SEO/AEO content blocks */
+@media (max-width: 760px) {
+  .cards { grid-template-columns: 1fr !important; }
+  .guide-top { grid-template-columns: 1fr !important; }
+  .faq-grid { grid-template-columns: 1fr !important; }
+  section > .wrap > div[style*="grid-template-columns:1fr 1fr"] { grid-template-columns: 1fr !important; }
+}
