@@ -52,6 +52,16 @@ a {
 .top.hide {
     transform: translateY(-100%);
 }
+/* Second header for language switcher - transparent when not scrolled */
+.top + .top {
+    background: transparent;
+    padding: 15px 0;
+}
+.top + .top.scrolled {
+    background: rgba(21,56,59,.95);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+}
 .nav {
     display: flex;
     justify-content: space-between;
@@ -99,6 +109,13 @@ a {
 }
 .links a:hover {
     color: #ffd9b7;
+}
+.lang-switch {
+    color: #ffd9b7 !important;
+    font-weight: 700 !important;
+}
+.lang-switch:hover {
+    color: #fff !important;
 }
 .button {
     display: inline-flex;
